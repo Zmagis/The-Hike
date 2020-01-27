@@ -19,12 +19,12 @@ function App() {
       <Element name="info">
         <Info />
       </Element>
-      <Element name="highlight">
+      <Element name="specialOffer">
         <SpecialOffer />
       </Element>
-      {/* <Element name="price">
+      <Element name="events">
         <Events />
-      </Element> */}
+      </Element>
       <Element name="location">
         <Location />
       </Element>

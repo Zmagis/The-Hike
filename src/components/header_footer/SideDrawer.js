@@ -31,11 +31,11 @@ const SideDrawer = props => {
           Info
         </ListItem>
 
-        <ListItem button onClick={() => scrollToSection("highlight")}>
+        <ListItem button onClick={() => scrollToSection("specialOffer")}>
           Special Offer
         </ListItem>
 
-        <ListItem button onClick={() => scrollToSection("price")}>
+        <ListItem button onClick={() => scrollToSection("events")}>
           Events
         </ListItem>
 
