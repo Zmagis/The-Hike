@@ -1,25 +1,23 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
-
-// import TicketIcon from "../../resources/images/icons/ticket.png";
+// import Button from "@material-ui/core/Button";
 
 const MyButton = props => {
   return (
-    <Button
-      href={props.link}
-      variant="contained"
-      size="small"
+    <button
+      onClick={props.click}
       style={{
         background: "#ffa800",
         color: "white",
-        paddingRight: 20,
-        margin: 20
+        padding: "10px 20px 10px 10px",
+        borderRadius: "5px",
+        border: "none",
+        margin: 20,
+        cursor: "pointer"
       }}
     >
-      {/* className="iconImage" */}
       <i className="fas fa-hiking iconImage"></i>
       {props.children}
-    </Button>
+    </button>
   );
 };
 

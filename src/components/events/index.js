@@ -3,6 +3,7 @@ import Zoom from "react-reveal/Zoom";
 
 import "./events.css";
 import Button from "../UI/Button";
+import RegistrationForm from "../registrationForm/registrationForm";
 
 class Pricing extends Component {
   state = {
@@ -13,12 +14,8 @@ class Pricing extends Component {
       "Partem qualisque ne eam, in vim perpetua suavitate, mazim doming labitur no vim. ",
       " Qui ut iriure suavitate adipiscing, nisl possit no quo."
     ],
-    links: [
-      "https://www.google.com/?hl=lt",
-      "https://www.google.com/?hl=lt",
-      "https://www.google.com/?hl=lt"
-    ],
-    delay: [500, 0, 500]
+    delay: [500, 0, 500],
+    showRegistrationForm: false
   };
 
   showBoxes = () =>
@@ -31,20 +28,33 @@ class Pricing extends Component {
               <span>{this.state.positions[i]}</span>
             </div>
             <div className="event_description">{this.state.description[i]}</div>
-            <Button link={this.state.links[i]}>GO!</Button>
+            <Button click={this.handleCLick}>GO!</Button>
           </div>
         </div>
       </Zoom>
     ));
 
+  handleCLick = () => {
+    this.setState(prevState => {
+      return { showRegistrationForm: !prevState };
+    });
+  };
   render() {
+    console.log(this.state.showRegistrationForm);
+    let form = null;
+    if (this.state.showRegistrationForm) {
+      form = <RegistrationForm show={this.state.RegistrationForm} />;
+    }
     return (
-      <div className="bck_black">
-        <div className="center_wrapper event_section">
-          <h2>Events</h2>
-          <div className="events_wrapper">{this.showBoxes()}</div>
+      <React.Fragment>
+        <div className="bck_black">
+          <div className="center_wrapper event_section">
+            <h2>Events</h2>
+            <div className="events_wrapper">{this.showBoxes()}</div>
+          </div>
         </div>
-      </div>
+        {form}
+      </React.Fragment>
     );
   }
 }

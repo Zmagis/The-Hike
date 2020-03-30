@@ -6,7 +6,7 @@ import Bounce from "react-reveal/Bounce";
 
 class Time extends React.Component {
   state = {
-    deadline: "Mar, 20, 2020",
+    deadline: "Jun, 10, 2020",
     days: "0",
     hours: "0",
     minutes: "0",
