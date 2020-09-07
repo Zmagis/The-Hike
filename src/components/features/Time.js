@@ -1,22 +1,22 @@
-import React from "react";
+import React from 'react';
 
-import "./Time.css";
+import './Time.css';
 
-import Bounce from "react-reveal/Bounce";
+import Bounce from 'react-reveal/Bounce';
 
 class Time extends React.Component {
   state = {
-    deadline: "Jun, 10, 2020",
-    days: "0",
-    hours: "0",
-    minutes: "0",
-    seconds: "0"
+    deadline: 'Feb, 05, 2021',
+    days: '0',
+    hours: '0',
+    minutes: '0',
+    seconds: '0',
   };
 
-  countDown = deadline => {
+  countDown = (deadline) => {
     const time = Date.parse(deadline) - Date.parse(new Date());
     if (time < 0) {
-      console.log("Date passed");
+      console.log('Date passed');
     } else {
       const seconds = Math.floor((time / 1000) % 60);
       const minutes = Math.floor((time / 1000 / 60) % 60);
@@ -26,7 +26,7 @@ class Time extends React.Component {
         seconds,
         minutes,
         hours,
-        days
+        days,
       });
     }
   };

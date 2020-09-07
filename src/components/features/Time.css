@@ -1,5 +1,6 @@
 .countdown_wrapper {
   position: absolute;
+  left: 15px;
   bottom: 0px;
   color: #ffffff;
 }
